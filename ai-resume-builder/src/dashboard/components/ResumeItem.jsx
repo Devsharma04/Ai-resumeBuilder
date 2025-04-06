@@ -40,7 +40,7 @@ function ResumeItem({ resume, refreshData }) {
         `${import.meta.env.VITE_SERVER_URL}delete-resume/${resume.resumeId}`
       );
       toast.success("Resume Deleted");
-      refreshData();
+      await refreshData();
       setOpenAlert(false);
     } catch (error) {
       console.log(error);
