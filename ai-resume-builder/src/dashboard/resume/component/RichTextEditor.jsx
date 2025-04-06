@@ -35,7 +35,7 @@ function RichTextEditor({ onRichTextChange, index, defaultValue }) {
       toast.error("Please Add Position Title");
       return;
     }
-    const PROMPT = `position titile: ${resumeInfo.experience[index].title} , Depends on position title give me 5-7 bullet points for my experience in resume (Please do not add experince level and No JSON array) , give me result in HTML tags`;
+    const PROMPT = `position titile: ${resumeInfo.experience[index].title} , Depends on position title give me 5-7 bullet points for my experience in resume (Please do not add experince level and No JSON array) , give me result in only HTML tags dont add any other text.`;
     try {
       const response = await ai.models.generateContent({
         model: "gemini-2.0-flash",
