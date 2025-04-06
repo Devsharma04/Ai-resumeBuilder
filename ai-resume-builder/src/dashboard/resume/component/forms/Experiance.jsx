@@ -80,7 +80,7 @@ function Experiance() {
               <div>
                 <label className="text-xs">Position Title</label>
                 <Input
-                  defaultValue={item.title}
+                  value={item.title || ""}
                   name="title"
                   onChange={(e) => handleChange(index, e)}
                 />
@@ -88,7 +88,7 @@ function Experiance() {
               <div>
                 <label className="text-xs">Company Name</label>
                 <Input
-                  defaultValue={item.companyName}
+                  value={item.companyName || ""}
                   name="companyName"
                   onChange={(e) => handleChange(index, e)}
                 />
@@ -96,7 +96,7 @@ function Experiance() {
               <div>
                 <label className="text-xs">City</label>
                 <Input
-                  defaultValue={item.city}
+                  value={item.city || ""}
                   name="city"
                   onChange={(e) => handleChange(index, e)}
                 />
@@ -104,7 +104,7 @@ function Experiance() {
               <div>
                 <label className="text-xs">State</label>
                 <Input
-                  defaultValue={item.state}
+                  value={item.state || ""}
                   name="state"
                   onChange={(e) => handleChange(index, e)}
                 />
@@ -112,7 +112,7 @@ function Experiance() {
               <div>
                 <label className="text-xs">Start Date</label>
                 <Input
-                  defaultValue={item.startDate}
+                  value={item.startDate || ""}
                   type="date"
                   name="startDate"
                   onChange={(e) => handleChange(index, e)}
@@ -121,7 +121,7 @@ function Experiance() {
               <div>
                 <label className="text-xs">End Date</label>
                 <Input
-                  defaultValue={item.endDate}
+                  value={item.endDate || ""}
                   type="date"
                   name="endDate"
                   onChange={(e) => handleChange(index, e)}
