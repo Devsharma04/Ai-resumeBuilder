@@ -100,6 +100,7 @@ const resumeSchema = new mongoose.Schema(
     ],
     themeColor: {
       type: String,
+      default: "#A52A2A",
     },
   },
   { timestamps: true }

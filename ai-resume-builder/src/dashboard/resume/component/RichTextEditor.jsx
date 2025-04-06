@@ -19,12 +19,12 @@ import { GoogleGenAI } from "@google/genai";
 function RichTextEditor({ onRichTextChange, index, defaultValue }) {
   const { resumeInfo } = useContext(ResumeInfoContext);
   const [value, setValue] = useState(defaultValue);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     if (defaultValue !== undefined) {
       setValue(defaultValue);
     }
   }, [defaultValue]);
-  const [loading, setLoading] = useState(false);
   const ai = new GoogleGenAI({
     apiKey: import.meta.env.VITE_GOOGLE_AI_API_KEY,
   });

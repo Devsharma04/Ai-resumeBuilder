@@ -32,6 +32,7 @@ function ThemeColor() {
     "#CDDC39", // Lime
     "#2196F3", //
   ];
+
   const { resumeInfo, SetResumeInfo } = useContext(ResumeInfoContext);
   const [selectedColor, setSelectedColor] = useState();
 
