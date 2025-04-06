@@ -34,7 +34,6 @@ function AddResume() {
       userEmail: user?.primaryEmailAddress?.emailAddress,
       userName: user?.fullName,
     };
-    console.log(data);
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_SERVER_URL}user-resumes`,
@@ -46,7 +45,7 @@ function AddResume() {
         }
       );
       toast.success(response.data.message);
-      navigate(`/dashboard/resume/${response.data.resumeId}/edit`);
+      navigate(`/dashboard/resume/${uuid}/edit`);
     } catch (error) {
       console.log(error);
     }
