@@ -12,7 +12,7 @@ function Dashboard() {
   const getUserResumes = async () => {
     const token = await getToken();
     const URL = `${import.meta.env.VITE_SERVER_URL}get-resumeData`;
-    console.log(URL);
+
     try {
       const resp = await axios.post(
         URL,
