@@ -7,7 +7,12 @@ function Header() {
   const navigation = useNavigate();
   return (
     <div className="p-3 px-5 flex justify-between shadow-md">
-      <img src="/logo.svg" alt="" onClick={() => navigation("/")} />
+      <img
+        src="/logo.svg"
+        className="cursor-pointer"
+        alt=""
+        onClick={() => navigation("/")}
+      />
       {isSignedIn ? (
         <div className="flex gap-2 items-center">
           <Link to={"/dashboard"}>
