@@ -33,7 +33,18 @@ function Experiance() {
     setExperiance(newEntry);
   };
   const addNewExperiance = () => {
-    setExperiance([...experiance, { ...formField }]);
+    setExperiance([
+      ...experiance,
+      {
+        title: "",
+        companyName: "",
+        city: "",
+        state: "",
+        startDate: "",
+        endDate: "",
+        workSummery: "",
+      },
+    ]);
   };
   const removeExperiance = () => {
     if (experiance.length > 1) {
